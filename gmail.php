@@ -50,7 +50,7 @@ function removeEmoji($text) {
 
 //making page to behave like xml document to show feeds
 
-if($_GET['code'] == "asldjfklajsldjfewrouqweridsafhasdkfj") {
+if($_GET['code'] == "CUSTOM_VALIDATION_CODE") {
     //calling function
     $feed = check_email("GMAIL_USERNAME", "APP_SPECIFIC_PASS");
     $xml = simplexml_load_string($feed);
