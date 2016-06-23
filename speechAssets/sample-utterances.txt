@@ -1,0 +1,6 @@
+getMailIntent check mail
+getMailIntent mail
+getMailIntent to check my inbox
+getMailIntent inbox
+getMailIntent check inbox
+getMailIntent check my mail
