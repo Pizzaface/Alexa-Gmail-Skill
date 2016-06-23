@@ -50,20 +50,25 @@ function removeEmoji($text) {
 
 //making page to behave like xml document to show feeds
 
-if($_GET['code'] == "CUSTOM_VALIDATION_CODE")
-//calling function
-$feed = check_email("GMAIL)USERNAME", "APP_SPECIFIC_PASS");
-$xml = simplexml_load_string($feed);
-$json = json_encode($xml);
-$jsonArr = json_decode($json, true);
-if ($jsonArr['fullcount'] == "0") {
-    echo "No New Mail";
+if($_GET['code'] == "asldjfklajsldjfewrouqweridsafhasdkfj") {
+    //calling function
+    $feed = check_email("windowsinstalls", "nghoxwpkukfftncf");
+    $xml = simplexml_load_string($feed);
+    $json = json_encode($xml);
+    $jsonArr = json_decode($json, true);
+    if ($jsonArr['fullcount'] == "0") {
+        echo "No New Mail";
+    } elseif ($jsonArr['fullcount'] == "1") {
+        $speech = "Here is your most recent unread email: " . $jsonArr['entry']['title'] . " from " . $jsonArr['entry']['author']['name']; 
+         echo $speech;
+    } else {
+        $speech = "Here are your " . $jsonArr['fullcount'] ." most recent unread emails: ";
+        foreach ($jsonArr['entry'] as $row) {
+            $speech = $speech . removeEmoji($row['title']) . " from " . $row['author']['name'] . ", ";
+        }
+        echo $speech;
+    }
 } else {
-    $speech = "Here are your " . $jsonArr['fullcount'] ." most recent unread emails: ";
-foreach ($jsonArr['entry'] as $row) {
-    $speech = $speech . removeEmoji($row['title']) . " from " . $row['author']['name'] . ", ";
+    echo "Incorrect Code!";
 }
-echo $speech;
-}
-
 ?>
