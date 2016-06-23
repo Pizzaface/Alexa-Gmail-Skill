@@ -52,7 +52,7 @@ function removeEmoji($text) {
 
 if($_GET['code'] == "asldjfklajsldjfewrouqweridsafhasdkfj") {
     //calling function
-    $feed = check_email("windowsinstalls", "nghoxwpkukfftncf");
+    $feed = check_email("GMAIL_USERNAME", "APP_SPECIFIC_PASS");
     $xml = simplexml_load_string($feed);
     $json = json_encode($xml);
     $jsonArr = json_decode($json, true);
