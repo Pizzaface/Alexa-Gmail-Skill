@@ -114,8 +114,8 @@ function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     var sessionAttributes = {};
     var cardTitle = "Welcome";
-    var speechOutput = "Say a command, or video name.";
-    var repromptText = "Say something like, I want to watch The Game Grumps.";
+    var speechOutput = "I can check your Gmail inbox, just ask, check my inbox.;
+    var repromptText = "Say something like, Check my Inbox";
     var shouldEndSession = false;
 
     callback(sessionAttributes,
