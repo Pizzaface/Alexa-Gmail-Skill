@@ -1,0 +1,14 @@
+{
+  "intents": [
+    {
+      "intent": "getMailIntent"
+  
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
